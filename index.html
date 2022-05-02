@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <title>Form Validation</title>
+</head>
+<body>
+    <main class="container">
+        <section class="box">
+            <header class="title">
+                <h3>Sign Up </h3>
+            </header>
+
+            <form action="/" method="get" id="form">
+               <div class="b user">
+                <label for="username">Username:</label>
+               <span>
+                <input type="text" name="username" id="username" class="username" placeholder="Your username" required>
+               </span> 
+               </div> 
+
+               <div class="b email">
+                <label for="email">Email:</label>
+               <span>
+                <input type="email" name="email" id="email" class="email" placeholder="Your email" required>
+               </span> 
+               </div>
+
+               <div class="b pass">
+                <label for="password">Password:</label>
+               <span>
+                <input type="password" name="password" id="password" placeholder="Your password" onkeyup= "return passValidation()" required>
+               </span>
+               </div>
+
+               <div class="reqpass">
+                <ul>
+                    <li id="uppercase">At least one Uppercase character</li>
+                    <li id="lowercase">At least one Lowerrcase character</li>
+                    <li id="number">At least one number</li>
+                    <li id="specialchar">At least one special character (Example: !@#)</li>
+                    <li id="characters">Minimum 6 characters</li>
+                </ul>
+            </div>
+
+               <div class="b cpass">
+                <label for="cpassword">Confirm Password:</label>
+                <span>
+                <input type="password" name="cpassword" id="cpassword" placeholder="Type again your password" required>
+                </span>
+               </div>
+              
+
+               <div class="check">
+                <input type="checkbox" name="check" id="check" required>
+                <label for="check">I agree with the Term and Privacy</label>
+               </div>
+
+               <div class="btnsubmit">
+                   <button type="submit" id="submit">Sign Up</button>
+               </div>
+
+            </form>
+
+            <div id="error">
+                
+            </div>
+        </section>
+    </main>
+    
+</body>
+
+
+</html>
